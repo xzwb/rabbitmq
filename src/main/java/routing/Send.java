@@ -18,7 +18,7 @@ public class Send {
         Channel channel = connection.createChannel();
         channel.exchangeDeclare(EXCHANGE_NAME, "direct");
         String msg = "hello world";
-        channel.basicPublish(EXCHANGE_NAME, "error", null, msg.getBytes());
+        channel.basicPublish(EXCHANGE_NAME, "info", null, msg.getBytes());
         channel.close();
         connection.close();
     }
